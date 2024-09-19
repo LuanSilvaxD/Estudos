@@ -1,1 +1,22 @@
+# Grafico teste 02
+import matplotlib.pyplot as plt
+
+# Dados
+meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio']  # Corrigido: lista de strings separadas por vírgulas
+
+vendas = [120, 190, 150, 80, 20]  # Corrigido: lista de números inteiros, sem aspas
+
+# Grafico de Barras
+plt.bar(meses, vendas, color='royalblue')
+
+# Rotulos aos Eixos
+plt.xlabel('Mes')
+plt.ylabel('Vendas (em unidades)')  # Corrigido: 'Vendas' com letra maiúscula para consistência
+
+# Titulo do grafico
+plt.title('Vendas mensais')
+
+# Mostrar o grafico
+plt.show()
+
 
