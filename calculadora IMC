@@ -1,0 +1,60 @@
+# Codigos para funcao calculadora de indice de massa corporal!
+
+""" 
+
+IMC (kg/m2) > Classificação
+
+* Menor que 16,9 - Muito abaixo do peso
+* 17 a 18,4 - Abaixo do peso
+* 18,5 a 24,9 - Peso normal
+* 25 a 29,9 - Acima do peso
+* 30 a 34,9 - Obesidade grau I
+* 35 a 40 - Obesidade grau II
+* Maior que 40 - Obesidade grau III
+
+"""
+
+
+#Apresentação Pessoal
+
+print('Olá e bem-vindo à calculadora de índice de massa corporal! (IMC)')
+
+print('Vamos começar primeiramente com você nos dizendo o seu nome')
+
+primeiro_nome = input('Qual seu primeiro nome? ')
+sobrenome = input('Qual o seu sobrenome? ')
+
+print('Olá', primeiro_nome)
+
+idade = input('Certo, agora nos diga quantos anos você tem? ')
+
+print(primeiro_nome, "-", idade)
+
+#Calculo da IMC
+
+def calcular_imc(peso, altura):
+    return peso / (altura ** 2)
+
+def main():
+    peso = float(input("Digite seu peso em kg: "))
+    altura = float(input("Digite sua altura em metros: "))
+    imc = calcular_imc(peso, altura)
+    print(primeiro_nome, f"Seu IMC é: {imc:.2f}")
+
+    if imc < 16.9:
+        print("Você está abaixo do peso.")
+    elif 18.5 <= imc < 24.9:
+        print("Você está com peso normal.")
+    elif 25 <= imc < 29.9:
+        print("Você está acima do peso.")
+    elif 30 <= imc < 34.9:
+        print("Você está com obesidade grau I.")
+    elif 40 <= imc < 39.9:
+        print("Você está com obesidade grau II")
+    else:
+        print("Você está com obesidade grau III.")
+
+if __name__ == "__main__":
+    main()
+
+print("Obrigado por utilizar nossa Calculadora de Indice de massa corporal! ")
